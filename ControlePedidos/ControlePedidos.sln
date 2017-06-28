@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlePedidos", "ControlePedidos\ControlePedidos.csproj", "{91B71B56-ED82-4900-AADA-B92F47FEAB5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseModels", "BaseModels\BaseModels.csproj", "{76FC8A4F-BA1D-432D-978C-F11E02EBC21E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91B71B56-ED82-4900-AADA-B92F47FEAB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B71B56-ED82-4900-AADA-B92F47FEAB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B71B56-ED82-4900-AADA-B92F47FEAB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B71B56-ED82-4900-AADA-B92F47FEAB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FC8A4F-BA1D-432D-978C-F11E02EBC21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FC8A4F-BA1D-432D-978C-F11E02EBC21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FC8A4F-BA1D-432D-978C-F11E02EBC21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FC8A4F-BA1D-432D-978C-F11E02EBC21E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
