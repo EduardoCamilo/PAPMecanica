@@ -22,5 +22,9 @@ namespace ControlePedidos.Models
         public System.Data.Entity.DbSet<BaseModels.Servico> Servicoes { get; set; }
 
         public System.Data.Entity.DbSet<BaseModels.Automovel> Automovels { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Cliente> Clientes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.TipoDefeito> TipoDefeitoes { get; set; }
     }
 }
