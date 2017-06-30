@@ -11,6 +11,7 @@ namespace ControlePedidos.Controllers
 {
     public class AutomovelController : Controller
     {
+        //Deve ser utilizado o Contexto em todas as classes controller
         private Contexto db = new Contexto();
 
         // GET: Automovel
