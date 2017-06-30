@@ -14,7 +14,7 @@ namespace BaseModels
         [Required]
         public string Modelo { get; set; }
         public string Placa { get; set; }
-        public int Cor { get; set; }
+        public string Cor { get; set; }
         public int Ano { get; set; }
         public string Observacao{ get; set; }
 

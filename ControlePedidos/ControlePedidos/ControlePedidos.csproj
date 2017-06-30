@@ -230,12 +230,12 @@
     <Content Include="Views\Cliente\Create.cshtml" />
     <Content Include="Views\Cliente\Details.cshtml" />
     <Content Include="Views\Cliente\Edit.cshtml" />
-    <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Automovel\Index.cshtml" />
     <Content Include="Views\TipoDefeito\Delete.cshtml" />
     <Content Include="Views\TipoDefeito\Create.cshtml" />
     <Content Include="Views\TipoDefeito\Details.cshtml" />
     <Content Include="Views\TipoDefeito\Edit.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\TipoDefeito\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
