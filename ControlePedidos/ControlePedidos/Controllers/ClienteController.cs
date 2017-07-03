@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ControlePedidos.Controllers
 {
     public class ClienteController : Controller
@@ -18,7 +19,7 @@ namespace ControlePedidos.Controllers
         public ActionResult Index()
         {
             var clientes = db.Clientes.ToList();
-            return View();
+            return View(clientes);
         }
         //GET
         public ActionResult Create()
