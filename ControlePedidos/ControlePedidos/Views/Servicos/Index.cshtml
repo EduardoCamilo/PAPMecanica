@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<BaseModels.Servico>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Serviços";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    
+    @Html.ActionLink("Cadastrar um novo Serviço", "Create", null, htmlAttributes: new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -29,9 +30,9 @@
             @Html.DisplayFor(modelItem => item.Descricao)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ServicoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ServicoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ServicoID })
+            @Html.ActionLink("Ediar", "Edit", new { id=item.ServicoID }, htmlAttributes: new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ServicoID }, htmlAttributes: new { @class = "btn btn-primary" })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.ServicoID }, htmlAttributes: new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

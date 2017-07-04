@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Observacao)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.AutomovelID }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.AutomovelID }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.AutomovelID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.AutomovelID }, htmlAttributes: new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Detalhes", "Details", new { id=item.AutomovelID }, htmlAttributes: new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Excluir", "Delete", new { id=item.AutomovelID }, htmlAttributes: new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

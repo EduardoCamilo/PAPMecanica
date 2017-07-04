@@ -1,13 +1,13 @@
 ﻿@model BaseModels.TipoDefeito
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Defeito";
 }
 
-<h2>Detalhes</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>Tipo de Defeitos</h4>
+    <h4>Detalhamento do Defeito</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.TipoDefeitoID }) |
-    @Html.ActionLink("Voltar a lista", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.TipoDefeitoID }, htmlAttributes: new { @class = "btn btn-primary" })
+    @Html.ActionLink("Voltar para a Lista", "Index", null, htmlAttributes: new { @class = "btn btn-default" })
 </p>

@@ -1,13 +1,13 @@
 ﻿@model BaseModels.Automovel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Automóvel";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>Automovel</h4>
+    <h4>Detalhamento do Automóvel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,6 +53,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AutomovelID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.AutomovelID }, htmlAttributes: new { @class = "btn btn-primary" })
+    @Html.ActionLink("Voltar para a Lista", "Index", null, htmlAttributes: new { @class = "btn btn-default" })
 </p>
