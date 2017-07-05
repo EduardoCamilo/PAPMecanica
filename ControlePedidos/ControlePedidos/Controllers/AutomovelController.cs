@@ -24,6 +24,7 @@ namespace ControlePedidos.Controllers
         //GET
         public ActionResult Create()
         {
+            ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome");
             return View();
         }
 

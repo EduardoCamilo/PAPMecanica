@@ -16,6 +16,9 @@
             @Html.DisplayNameFor(model => model._Automovel.Modelo)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model._TipoDefeito.Nome)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
         <th></th>
@@ -25,6 +28,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item._Automovel.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._TipoDefeito.Nome)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Descricao)

@@ -17,10 +17,12 @@ namespace BaseModels
         //Relacionamente Veiculo --> Serviço
         [ForeignKey("_Automovel")]
         public int VeiculoID { get; set; }
-        public virtual Automovel _Automovel { get; set; } 
+        public virtual Automovel _Automovel { get; set; }
 
 
         //Relacionamento Defeito --> Serviço
-        public ICollection<TipoDefeito> Defeitos { get; set; }
+        [ForeignKey("_TipoDefeito")]
+        public int TipoDefeitoID { get; set; }
+        public virtual TipoDefeito _TipoDefeito { get; set; }
     }
 }

@@ -176,6 +176,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706300055165_InitialCreate.cs" />
+    <Compile Include="Migrations\201706300055165_InitialCreate.Designer.cs">
+      <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707042326490_PrimeiraMigration.cs" />
+    <Compile Include="Migrations\201707042326490_PrimeiraMigration.Designer.cs">
+      <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707050009569_SegundoMigration.cs" />
+    <Compile Include="Migrations\201707050009569_SegundoMigration.Designer.cs">
+      <DependentUpon>201707050009569_SegundoMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -292,6 +305,17 @@
       <Project>{76fc8a4f-ba1d-432d-978c-f11e02ebc21e}</Project>
       <Name>BaseModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706300055165_InitialCreate.resx">
+      <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707042326490_PrimeiraMigration.resx">
+      <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707050009569_SegundoMigration.resx">
+      <DependentUpon>201707050009569_SegundoMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

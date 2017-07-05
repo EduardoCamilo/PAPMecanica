@@ -18,6 +18,9 @@ namespace BaseModels
         public int Ano { get; set; }
         public string Observacao{ get; set; }
 
-
+        //Relacionamente Cliente --> Veiculo
+        [ForeignKey("_Cliente")]
+        public int ClienteID { get; set; }
+        public virtual Cliente _Cliente { get; set; }
     }
 }

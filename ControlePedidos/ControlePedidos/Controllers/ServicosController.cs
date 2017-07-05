@@ -41,6 +41,7 @@ namespace ControlePedidos.Controllers
         public ActionResult Create()
         {
             ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo");
+            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace ControlePedidos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ServicoID,Descricao,VeiculoID")] Servico servico)
+        public ActionResult Create([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
         {
             if (ModelState.IsValid)
             {

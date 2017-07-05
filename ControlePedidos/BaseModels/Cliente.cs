@@ -16,9 +16,6 @@ namespace BaseModels
         public string CPF { get; set; }
         public string Telefone{ get; set; }
 
-        //Relacionamento Cliente --> Automovel
-
-        public ICollection<Automovel> Automoveis { get; set; }
 
 }
 }
