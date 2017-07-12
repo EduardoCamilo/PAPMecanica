@@ -13,6 +13,7 @@ namespace BaseModels
         public int ClienteID { get; set; }
         [Required]
         public string Nome { get; set; }
+        public string SobreNome { get; set; }
         public string CPF { get; set; }
         public string Telefone{ get; set; }
 
