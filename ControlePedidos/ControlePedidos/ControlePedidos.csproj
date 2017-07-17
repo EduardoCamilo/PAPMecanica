@@ -180,6 +180,10 @@
     <Compile Include="Migrations\201706300055165_InitialCreate.Designer.cs">
       <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707040209240_InitialCreate.cs" />
+    <Compile Include="Migrations\201707040209240_InitialCreate.Designer.cs">
+      <DependentUpon>201707040209240_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201707042326490_PrimeiraMigration.cs" />
     <Compile Include="Migrations\201707042326490_PrimeiraMigration.Designer.cs">
       <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>
@@ -309,6 +313,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706300055165_InitialCreate.resx">
       <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707040209240_InitialCreate.resx">
+      <DependentUpon>201707040209240_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707042326490_PrimeiraMigration.resx">
       <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>

@@ -25,9 +25,19 @@ namespace ControleEstoque.Models
         {
         }
 
+        
+
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BaseModels.Cliente> Clientes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.CondicaoPagamento> CondicaoPagamentoes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Funcionario> Funcionarios { get; set; }
     }
 }

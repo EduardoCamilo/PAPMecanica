@@ -274,15 +274,27 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Cliente\CreateCliente.cshtml" />
+    <Content Include="Views\Cliente\DeleteCliente.cshtml" />
+    <Content Include="Views\Cliente\DetailsCliente.cshtml" />
+    <Content Include="Views\Cliente\EditCliente.cshtml" />
+    <Content Include="Views\Cliente\IndexCliente.cshtml" />
+    <Content Include="Views\CondicaoPagamento\CreatePagamento.cshtml" />
+    <Content Include="Views\CondicaoPagamento\DeletePagamento.cshtml" />
+    <Content Include="Views\CondicaoPagamento\DetailsPagamento.cshtml" />
+    <Content Include="Views\CondicaoPagamento\EditPagamento.cshtml" />
+    <Content Include="Views\CondicaoPagamento\IndexPagamento.cshtml" />
+    <Content Include="Views\Funcionario\CreateFuncionario.cshtml" />
+    <Content Include="Views\Funcionario\DeleteFuncionario.cshtml" />
+    <Content Include="Views\Funcionario\DetailsFuncionario.cshtml" />
+    <Content Include="Views\Funcionario\EditFuncionario.cshtml" />
+    <Content Include="Views\Funcionario\IndexFuncionario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categoria\" />
-    <Folder Include="Views\Cliente\" />
-    <Folder Include="Views\CondicaoPagamento\" />
     <Folder Include="Views\Embalagem\" />
     <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Funcionario\" />
     <Folder Include="Views\Produto\" />
     <Folder Include="Views\Usuario\" />
     <Folder Include="Views\Venda\" />
