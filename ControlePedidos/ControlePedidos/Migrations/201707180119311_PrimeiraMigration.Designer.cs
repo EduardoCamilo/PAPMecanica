@@ -7,13 +7,13 @@ namespace ControlePedidos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class SegundoMigration : IMigrationMetadata
+    public sealed partial class PrimeiraMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SegundoMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PrimeiraMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201707050009569_SegundoMigration"; }
+            get { return "201707180119311_PrimeiraMigration"; }
         }
         
         string IMigrationMetadata.Source

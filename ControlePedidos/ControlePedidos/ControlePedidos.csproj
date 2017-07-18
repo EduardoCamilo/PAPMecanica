@@ -176,21 +176,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706300055165_InitialCreate.cs" />
-    <Compile Include="Migrations\201706300055165_InitialCreate.Designer.cs">
-      <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707040209240_InitialCreate.cs" />
-    <Compile Include="Migrations\201707040209240_InitialCreate.Designer.cs">
-      <DependentUpon>201707040209240_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707042326490_PrimeiraMigration.cs" />
-    <Compile Include="Migrations\201707042326490_PrimeiraMigration.Designer.cs">
-      <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707050009569_SegundoMigration.cs" />
-    <Compile Include="Migrations\201707050009569_SegundoMigration.Designer.cs">
-      <DependentUpon>201707050009569_SegundoMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201707180119311_PrimeiraMigration.cs" />
+    <Compile Include="Migrations\201707180119311_PrimeiraMigration.Designer.cs">
+      <DependentUpon>201707180119311_PrimeiraMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contexto.cs" />
@@ -311,17 +299,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706300055165_InitialCreate.resx">
-      <DependentUpon>201706300055165_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707040209240_InitialCreate.resx">
-      <DependentUpon>201707040209240_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707042326490_PrimeiraMigration.resx">
-      <DependentUpon>201707042326490_PrimeiraMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707050009569_SegundoMigration.resx">
-      <DependentUpon>201707050009569_SegundoMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707180119311_PrimeiraMigration.resx">
+      <DependentUpon>201707180119311_PrimeiraMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

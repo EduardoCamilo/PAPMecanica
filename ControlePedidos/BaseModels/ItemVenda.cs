@@ -9,15 +9,22 @@ namespace BaseModels
 {
     public class ItemVenda
     {
+        public ItemVenda()
+        {
+            this.Produtos = new List<Produto>();
+        }
+
         public int ItemVendaID { get; set; }
         public int QuantidadeItemVenda { get; set; }
         public int QuantidadeEstoqueAtual { get; set; }
         public double PrecoUnitario { get; set; }
 
-        //Relacionamente ItemVenda --> Produto 
-        [ForeignKey("_Produto")]
-        public int ProdutoID { get; set; }
-        public virtual Produto _Produto { get; set; }
+        //Relacionamente ItemVenda --> Produto
+        public virtual ICollection<Produto> Produtos { get; set; }
+        
+        //[ForeignKey("_Produto")]
+        //public int ProdutoID { get; set; }
+        //public virtual Produto _Produto { get; set; }
 
         //Relacionamente ItemVenda --> Embalagem
         [ForeignKey("_Embalagem")]
