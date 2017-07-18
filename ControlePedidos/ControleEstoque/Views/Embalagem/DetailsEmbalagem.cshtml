@@ -1,0 +1,50 @@
+﻿@model BaseModels.Embalagem
+
+@{
+    ViewBag.Title = "DetailsEmbalagem";
+}
+
+<h2>DetailsEmbalagem</h2>
+
+<div>
+    <h4>Embalagem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeProdutoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeProdutoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEmbalagem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmbalagemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

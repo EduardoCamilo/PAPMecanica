@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaseModels
 {
-    class CondicaoPagamento
+    public class CondicaoPagamento
     {
         public int CondicaoPagamentoID { get; set; }
         public string NomeCondicaoPagamento { get; set; }

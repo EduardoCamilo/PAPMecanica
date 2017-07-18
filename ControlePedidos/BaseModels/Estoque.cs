@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BaseModels
 {
-    class Estoque
+    public class Estoque
     {
         public int EstoqueID { get; set; }
         public int QuantidadeEstoque { get; set; }

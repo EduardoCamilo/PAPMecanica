@@ -7,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace BaseModels
 {
-    class Categoria
+    public class Categoria
     {
         public int CategoriaID { get; set; }
         public string DescricaoCategoria { get; set; }
-
-
-        //Relacionamente Categoria --> Produto 
-        [ForeignKey("_Produto")]
-        public int ProdutoID { get; set; }
-        public virtual Produto _Produto { get; set; }
 
     }
 }

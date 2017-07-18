@@ -289,15 +289,35 @@
     <Content Include="Views\Funcionario\DetailsFuncionario.cshtml" />
     <Content Include="Views\Funcionario\EditFuncionario.cshtml" />
     <Content Include="Views\Funcionario\IndexFuncionario.cshtml" />
+    <Content Include="Views\Categoria\CreateCategoria.cshtml" />
+    <Content Include="Views\Categoria\DeleteCategoria.cshtml" />
+    <Content Include="Views\Categoria\DetailsCategoria.cshtml" />
+    <Content Include="Views\Categoria\EditCategoria.cshtml" />
+    <Content Include="Views\Categoria\IndexCategoria.cshtml" />
+    <Content Include="Views\Embalagem\CreateEmbalagem.cshtml" />
+    <Content Include="Views\Embalagem\DeleteEmbalagem.cshtml" />
+    <Content Include="Views\Embalagem\DetailsEmbalagem.cshtml" />
+    <Content Include="Views\Embalagem\EditEmbalagem.cshtml" />
+    <Content Include="Views\Embalagem\IndexEmbalagem.cshtml" />
+    <Content Include="Views\Estoque\CreateEstoque.cshtml" />
+    <Content Include="Views\Estoque\DeleteEstoque.cshtml" />
+    <Content Include="Views\Estoque\DetailsEstoque.cshtml" />
+    <Content Include="Views\Estoque\EditEstoque.cshtml" />
+    <Content Include="Views\Estoque\IndexEstoque.cshtml" />
+    <Content Include="Views\Produto\CreateProduto.cshtml" />
+    <Content Include="Views\Produto\DeleteProduto.cshtml" />
+    <Content Include="Views\Produto\DetailsProdutos.cshtml" />
+    <Content Include="Views\Produto\EditProduto.cshtml" />
+    <Content Include="Views\Produto\IndexProduto.cshtml" />
+    <Content Include="Views\Venda\CreateVenda.cshtml" />
+    <Content Include="Views\Venda\DeleteVenda.cshtml" />
+    <Content Include="Views\Venda\DetailsVenda.cshtml" />
+    <Content Include="Views\Venda\EditVenda.cshtml" />
+    <Content Include="Views\Venda\IndexVenda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Categoria\" />
-    <Folder Include="Views\Embalagem\" />
-    <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Produto\" />
     <Folder Include="Views\Usuario\" />
-    <Folder Include="Views\Venda\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

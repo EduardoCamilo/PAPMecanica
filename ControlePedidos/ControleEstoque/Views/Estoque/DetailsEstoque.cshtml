@@ -1,0 +1,50 @@
+﻿@model BaseModels.Estoque
+
+@{
+    ViewBag.Title = "DetailsEstoque";
+}
+
+<h2>DetailsEstoque</h2>
+
+<div>
+    <h4>Estoque</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._Produto.DescricaoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Produto.DescricaoProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MargemSeguranca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MargemSeguranca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyProperty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyProperty)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EstoqueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
