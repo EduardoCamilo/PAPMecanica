@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ControlePedidos.Controllers
+namespace PAP.Controllers
 {
     public class HomeController : Controller
     {
