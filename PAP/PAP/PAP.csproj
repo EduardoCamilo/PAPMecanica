@@ -196,23 +196,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AutomovelController.cs" />
-    <Compile Include="Controllers\CategoriaController.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\CondicaoPagamentoController.cs" />
-    <Compile Include="Controllers\EmbalagemController.cs" />
-    <Compile Include="Controllers\EstoqueController.cs" />
+    <Compile Include="Controllers\AutomovelsController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\CondicaoPagamentosController.cs" />
+    <Compile Include="Controllers\EmbalagensController.cs" />
+    <Compile Include="Controllers\EstoquesController.cs" />
+    <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\ServicosController.cs" />
-    <Compile Include="Controllers\TipoDefeitoController.cs" />
+    <Compile Include="Controllers\TipoDefeitosController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
-    <Compile Include="Controllers\VendaController.cs" />
-    <Compile Include="Controllers\VendedorController.cs" />
+    <Compile Include="Controllers\VendasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707190302345_InitialCreate.cs" />
+    <Compile Include="Migrations\201707190302345_InitialCreate.Designer.cs">
+      <DependentUpon>201707190302345_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707220015298_Primeiro.cs" />
+    <Compile Include="Migrations\201707220015298_Primeiro.Designer.cs">
+      <DependentUpon>201707220015298_Primeiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -243,14 +252,18 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -277,31 +290,65 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Automovel\CreateAutomovel.cshtml" />
-    <Content Include="Views\Automovel\EditAutomovel.cshtml" />
-    <Content Include="Views\Automovel\DeleteAutomovel.cshtml" />
-    <Content Include="Views\Automovel\DetailsAutomovel.cshtml" />
-    <Content Include="Views\Automovel\IndexAutomovel.cshtml">
-      <BrowseToURL>~/Automovel/IndexAutomovel</BrowseToURL>
-    </Content>
-    <Content Include="Views\Cliente\CreateCliente.cshtml" />
-    <Content Include="Views\Cliente\DeleteCliente.cshtml" />
-    <Content Include="Views\Cliente\DetailsCliente.cshtml" />
-    <Content Include="Views\Cliente\EditCliente.cshtml" />
-    <Content Include="Views\Cliente\IndexCliente.cshtml" />
+    <Content Include="Views\Automovels\Create.cshtml" />
+    <Content Include="Views\Automovels\Delete.cshtml" />
+    <Content Include="Views\Automovels\Details.cshtml" />
+    <Content Include="Views\Automovels\Edit.cshtml" />
+    <Content Include="Views\Automovels\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\CondicaoPagamentos\Create.cshtml" />
+    <Content Include="Views\CondicaoPagamentos\Delete.cshtml" />
+    <Content Include="Views\CondicaoPagamentos\Details.cshtml" />
+    <Content Include="Views\CondicaoPagamentos\Edit.cshtml" />
+    <Content Include="Views\CondicaoPagamentos\Index.cshtml" />
+    <Content Include="Views\Embalagens\Create.cshtml" />
+    <Content Include="Views\Embalagens\Delete.cshtml" />
+    <Content Include="Views\Embalagens\Details.cshtml" />
+    <Content Include="Views\Embalagens\Edit.cshtml" />
+    <Content Include="Views\Embalagens\Index.cshtml" />
+    <Content Include="Views\Estoques\Create.cshtml" />
+    <Content Include="Views\Estoques\Delete.cshtml" />
+    <Content Include="Views\Estoques\Details.cshtml" />
+    <Content Include="Views\Estoques\Edit.cshtml" />
+    <Content Include="Views\Estoques\Index.cshtml" />
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
+    <Content Include="Views\Servicos\Create.cshtml" />
+    <Content Include="Views\Servicos\Delete.cshtml" />
+    <Content Include="Views\Servicos\Details.cshtml" />
+    <Content Include="Views\Servicos\Edit.cshtml" />
+    <Content Include="Views\Servicos\Index.cshtml" />
+    <Content Include="Views\TipoDefeitos\Create.cshtml" />
+    <Content Include="Views\TipoDefeitos\Delete.cshtml" />
+    <Content Include="Views\TipoDefeitos\Details.cshtml" />
+    <Content Include="Views\TipoDefeitos\Edit.cshtml" />
+    <Content Include="Views\TipoDefeitos\Index.cshtml" />
+    <Content Include="Views\Funcionarios\Create.cshtml" />
+    <Content Include="Views\Funcionarios\Delete.cshtml" />
+    <Content Include="Views\Funcionarios\Details.cshtml" />
+    <Content Include="Views\Funcionarios\Edit.cshtml" />
+    <Content Include="Views\Funcionarios\Index.cshtml" />
+    <Content Include="Views\Vendas\Create.cshtml" />
+    <Content Include="Views\Vendas\Delete.cshtml" />
+    <Content Include="Views\Vendas\Details.cshtml" />
+    <Content Include="Views\Vendas\Edit.cshtml" />
+    <Content Include="Views\Vendas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Categoria\" />
-    <Folder Include="Views\CondicaoPagamento\" />
-    <Folder Include="Views\Embalagem\" />
-    <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Produto\" />
-    <Folder Include="Views\Servicos\" />
-    <Folder Include="Views\TipoDefeito\" />
     <Folder Include="Views\Usuario\" />
-    <Folder Include="Views\Venda\" />
-    <Folder Include="Views\Vendedor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -316,6 +363,14 @@
       <Project>{cdfa401a-425c-431b-8c7f-526839323ad3}</Project>
       <Name>BaseModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707190302345_InitialCreate.resx">
+      <DependentUpon>201707190302345_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707220015298_Primeiro.resx">
+      <DependentUpon>201707220015298_Primeiro.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

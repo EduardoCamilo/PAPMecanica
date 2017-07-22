@@ -18,6 +18,7 @@ namespace BaseModels
         public string LoginFuncionario { get; set; }
         public string SenhaFuncionario { get; set; }
         public string TipoFuncionario { get; set; }
+        public bool AtivoFuncionario { get; set; }
 
     }
 }

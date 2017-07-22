@@ -11,116 +11,116 @@ using PAP.Models;
 
 namespace PAP.Controllers
 {
-    public class ServicosController : Controller
+    public class ProdutosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Servicos
+        // GET: Produtos
         public ActionResult Index()
         {
-            var servicoes = db.Servicoes.Include(s => s._Automovel).Include(s => s._TipoDefeito);
-            return View(servicoes.ToList());
+            var produtoes = db.Produtoes.Include(p => p._Categoria).Include(p => p._Embalagem);
+            return View(produtoes.ToList());
         }
 
-        // GET: Servicos/Details/5
+        // GET: Produtos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Produto produto = db.Produtoes.Find(id);
+            if (produto == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(produto);
         }
 
-        // GET: Servicos/Create
+        // GET: Produtos/Create
         public ActionResult Create()
         {
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo");
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome");
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria");
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem");
             return View();
         }
 
-        // POST: Servicos/Create
+        // POST: Produtos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Create([Bind(Include = "ProdutoID,CodigoBarras,DescricaoProduto,PrecoProduto,PesoBruto,PesoLiquido,QuantidadeEstoque,EnderecoRua,EnderecoBloco,EnderecoPratileira,EmbalagemID,CategoriaID")] Produto produto)
         {
             if (ModelState.IsValid)
             {
-                db.Servicoes.Add(servico);
+                db.Produtoes.Add(produto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
+            return View(produto);
         }
 
-        // GET: Servicos/Edit/5
+        // GET: Produtos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Produto produto = db.Produtoes.Find(id);
+            if (produto == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
+            return View(produto);
         }
 
-        // POST: Servicos/Edit/5
+        // POST: Produtos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Edit([Bind(Include = "ProdutoID,CodigoBarras,DescricaoProduto,PrecoProduto,PesoBruto,PesoLiquido,QuantidadeEstoque,EnderecoRua,EnderecoBloco,EnderecoPratileira,EmbalagemID,CategoriaID")] Produto produto)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(servico).State = EntityState.Modified;
+                db.Entry(produto).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
+            return View(produto);
         }
 
-        // GET: Servicos/Delete/5
+        // GET: Produtos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Produto produto = db.Produtoes.Find(id);
+            if (produto == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(produto);
         }
 
-        // POST: Servicos/Delete/5
+        // POST: Produtos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Servico servico = db.Servicoes.Find(id);
-            db.Servicoes.Remove(servico);
+            Produto produto = db.Produtoes.Find(id);
+            db.Produtoes.Remove(produto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

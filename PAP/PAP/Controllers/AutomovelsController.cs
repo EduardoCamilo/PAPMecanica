@@ -11,116 +11,112 @@ using PAP.Models;
 
 namespace PAP.Controllers
 {
-    public class ServicosController : Controller
+    public class AutomovelsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Servicos
+        // GET: Automovels
         public ActionResult Index()
         {
-            var servicoes = db.Servicoes.Include(s => s._Automovel).Include(s => s._TipoDefeito);
-            return View(servicoes.ToList());
+            var automovels = db.Automovels.Include(a => a._Cliente);
+            return View(automovels.ToList());
         }
 
-        // GET: Servicos/Details/5
+        // GET: Automovels/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Automovel automovel = db.Automovels.Find(id);
+            if (automovel == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(automovel);
         }
 
-        // GET: Servicos/Create
+        // GET: Automovels/Create
         public ActionResult Create()
         {
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo");
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome");
+            ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome");
             return View();
         }
 
-        // POST: Servicos/Create
+        // POST: Automovels/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Create([Bind(Include = "AutomovelID,Modelo,Placa,Cor,Ano,Observacao,ClienteID")] Automovel automovel)
         {
             if (ModelState.IsValid)
             {
-                db.Servicoes.Add(servico);
+                db.Automovels.Add(automovel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", automovel.ClienteID);
+            return View(automovel);
         }
 
-        // GET: Servicos/Edit/5
+        // GET: Automovels/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Automovel automovel = db.Automovels.Find(id);
+            if (automovel == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", automovel.ClienteID);
+            return View(automovel);
         }
 
-        // POST: Servicos/Edit/5
+        // POST: Automovels/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Edit([Bind(Include = "AutomovelID,Modelo,Placa,Cor,Ano,Observacao,ClienteID")] Automovel automovel)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(servico).State = EntityState.Modified;
+                db.Entry(automovel).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", automovel.ClienteID);
+            return View(automovel);
         }
 
-        // GET: Servicos/Delete/5
+        // GET: Automovels/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            Automovel automovel = db.Automovels.Find(id);
+            if (automovel == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(automovel);
         }
 
-        // POST: Servicos/Delete/5
+        // POST: Automovels/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Servico servico = db.Servicoes.Find(id);
-            db.Servicoes.Remove(servico);
+            Automovel automovel = db.Automovels.Find(id);
+            db.Automovels.Remove(automovel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,0 +1,58 @@
+﻿@model BaseModels.CondicaoPagamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CondicaoPagamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCondicaoPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCondicaoPagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoCondicaoPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoCondicaoPagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoCondicaoPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoCondicaoPagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescontoCondicaoPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescontoCondicaoPagamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AcrescimoCondicaoPagamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcrescimoCondicaoPagamento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CondicaoPagamentoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

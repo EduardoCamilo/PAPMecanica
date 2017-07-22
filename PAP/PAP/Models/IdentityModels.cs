@@ -33,5 +33,25 @@ namespace PAP.Models
         public System.Data.Entity.DbSet<BaseModels.Automovel> Automovels { get; set; }
 
         public System.Data.Entity.DbSet<BaseModels.Cliente> Clientes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Categoria> Categorias { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.CondicaoPagamento> CondicaoPagamentoes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Embalagem> Embalagems { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Estoque> Estoques { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Produto> Produtoes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Servico> Servicoes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.TipoDefeito> TipoDefeitoes { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Funcionario> Funcionarios { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.Venda> Vendas { get; set; }
+
+        public System.Data.Entity.DbSet<BaseModels.ItemVenda> ItemVendas { get; set; }
     }
 }

@@ -11,116 +11,107 @@ using PAP.Models;
 
 namespace PAP.Controllers
 {
-    public class ServicosController : Controller
+    public class TipoDefeitosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Servicos
+        // GET: TipoDefeitos
         public ActionResult Index()
         {
-            var servicoes = db.Servicoes.Include(s => s._Automovel).Include(s => s._TipoDefeito);
-            return View(servicoes.ToList());
+            return View(db.TipoDefeitoes.ToList());
         }
 
-        // GET: Servicos/Details/5
+        // GET: TipoDefeitos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            TipoDefeito tipoDefeito = db.TipoDefeitoes.Find(id);
+            if (tipoDefeito == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(tipoDefeito);
         }
 
-        // GET: Servicos/Create
+        // GET: TipoDefeitos/Create
         public ActionResult Create()
         {
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo");
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome");
             return View();
         }
 
-        // POST: Servicos/Create
+        // POST: TipoDefeitos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Create([Bind(Include = "TipoDefeitoID,Nome,Descricao")] TipoDefeito tipoDefeito)
         {
             if (ModelState.IsValid)
             {
-                db.Servicoes.Add(servico);
+                db.TipoDefeitoes.Add(tipoDefeito);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            return View(tipoDefeito);
         }
 
-        // GET: Servicos/Edit/5
+        // GET: TipoDefeitos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            TipoDefeito tipoDefeito = db.TipoDefeitoes.Find(id);
+            if (tipoDefeito == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            return View(tipoDefeito);
         }
 
-        // POST: Servicos/Edit/5
+        // POST: TipoDefeitos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ServicoID,Descricao,VeiculoID,TipoDefeitoID")] Servico servico)
+        public ActionResult Edit([Bind(Include = "TipoDefeitoID,Nome,Descricao")] TipoDefeito tipoDefeito)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(servico).State = EntityState.Modified;
+                db.Entry(tipoDefeito).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.VeiculoID = new SelectList(db.Automovels, "AutomovelID", "Modelo", servico.VeiculoID);
-            ViewBag.TipoDefeitoID = new SelectList(db.TipoDefeitoes, "TipoDefeitoID", "Nome", servico.TipoDefeitoID);
-            return View(servico);
+            return View(tipoDefeito);
         }
 
-        // GET: Servicos/Delete/5
+        // GET: TipoDefeitos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servico servico = db.Servicoes.Find(id);
-            if (servico == null)
+            TipoDefeito tipoDefeito = db.TipoDefeitoes.Find(id);
+            if (tipoDefeito == null)
             {
                 return HttpNotFound();
             }
-            return View(servico);
+            return View(tipoDefeito);
         }
 
-        // POST: Servicos/Delete/5
+        // POST: TipoDefeitos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Servico servico = db.Servicoes.Find(id);
-            db.Servicoes.Remove(servico);
+            TipoDefeito tipoDefeito = db.TipoDefeitoes.Find(id);
+            db.TipoDefeitoes.Remove(tipoDefeito);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

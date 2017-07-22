@@ -1,0 +1,112 @@
+﻿@model BaseModels.Produto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._Categoria.DescricaoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Categoria.DescricaoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Embalagem.DescricaoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Embalagem.DescricaoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoBarras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoBarras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecoProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PesoBruto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PesoBruto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PesoLiquido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PesoLiquido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoRua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoRua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoBloco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoBloco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoPratileira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoPratileira)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
