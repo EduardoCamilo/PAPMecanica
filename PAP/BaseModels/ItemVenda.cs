@@ -37,5 +37,9 @@ namespace BaseModels
         public int CategoriaID { get; set; }
         public virtual Categoria _Categoria { get; set; }
 
+        [ForeignKey("_Venda")]
+        public int VendaID { get; set; }
+        public virtual Venda _Venda { get; set; }
+
     }
 }

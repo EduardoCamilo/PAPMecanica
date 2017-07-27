@@ -49,6 +49,7 @@
     <Compile Include="Estoque.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="ItemVenda.cs" />
+    <Compile Include="Pagamento.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servico.cs" />

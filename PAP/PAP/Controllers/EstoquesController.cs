@@ -49,7 +49,7 @@ namespace PAP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EstoqueID,QuantidadeEstoque,MargemSeguranca,MyProperty,ProdutoID")] Estoque estoque)
+        public ActionResult Create([Bind(Include = "EstoqueID,QuantidadeEstoque,MargemSeguranca,EnderecoRua,EnderecoBloco,EnderecoPratileira,ProdutoID")] Estoque estoque)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace PAP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EstoqueID,QuantidadeEstoque,MargemSeguranca,MyProperty,ProdutoID")] Estoque estoque)
+        public ActionResult Edit([Bind(Include = "EstoqueID,QuantidadeEstoque,MargemSeguranca,EnderecoRua,EnderecoBloco,EnderecoPratileira,ProdutoID")] Estoque estoque)
         {
             if (ModelState.IsValid)
             {

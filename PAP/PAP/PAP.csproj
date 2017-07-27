@@ -204,6 +204,7 @@
     <Compile Include="Controllers\EstoquesController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemVendasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\ServicosController.cs" />
@@ -220,6 +221,14 @@
     <Compile Include="Migrations\201707220015298_Primeiro.cs" />
     <Compile Include="Migrations\201707220015298_Primeiro.Designer.cs">
       <DependentUpon>201707220015298_Primeiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250031311_FORCE.cs" />
+    <Compile Include="Migrations\201707250031311_FORCE.Designer.cs">
+      <DependentUpon>201707250031311_FORCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707270354255_Segundo.cs" />
+    <Compile Include="Migrations\201707270354255_Segundo.Designer.cs">
+      <DependentUpon>201707270354255_Segundo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -345,6 +354,11 @@
     <Content Include="Views\Vendas\Details.cshtml" />
     <Content Include="Views\Vendas\Edit.cshtml" />
     <Content Include="Views\Vendas\Index.cshtml" />
+    <Content Include="Views\ItemVendas\Create.cshtml" />
+    <Content Include="Views\ItemVendas\Delete.cshtml" />
+    <Content Include="Views\ItemVendas\Details.cshtml" />
+    <Content Include="Views\ItemVendas\Edit.cshtml" />
+    <Content Include="Views\ItemVendas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -370,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707220015298_Primeiro.resx">
       <DependentUpon>201707220015298_Primeiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250031311_FORCE.resx">
+      <DependentUpon>201707250031311_FORCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707270354255_Segundo.resx">
+      <DependentUpon>201707270354255_Segundo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

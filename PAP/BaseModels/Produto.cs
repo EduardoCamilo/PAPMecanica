@@ -13,12 +13,9 @@ namespace BaseModels
         public int CodigoBarras { get; set; }
         public string DescricaoProduto { get; set; }
         public double PrecoProduto { get; set; }
+        public double PrecoCusto { get; set; }
         public double PesoBruto { get; set; }
         public double PesoLiquido { get; set; }
-        public int QuantidadeEstoque { get; set; }
-        public string EnderecoRua { get; set; }
-        public string EnderecoBloco { get; set; }
-        public string EnderecoPratileira { get; set; }
 
         //Relacionamente Produto --> Embalagem
         [ForeignKey("_Embalagem")]

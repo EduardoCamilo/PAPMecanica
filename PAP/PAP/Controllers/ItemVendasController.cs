@@ -11,33 +11,33 @@ using PAP.Models;
 
 namespace PAP.Controllers
 {
-    public class ProdutosController : Controller
+    public class ItemVendasController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Produtos
+        // GET: ItemVendas
         public ActionResult Index()
         {
-            var produtoes = db.Produtoes.Include(p => p._Categoria).Include(p => p._Embalagem);
-            return View(produtoes.ToList());
+            var itemVendas = db.ItemVendas.Include(i => i._Categoria).Include(i => i._Embalagem);
+            return View(itemVendas.ToList());
         }
 
-        // GET: Produtos/Details/5
+        // GET: ItemVendas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
-            if (produto == null)
+            ItemVenda itemVenda = db.ItemVendas.Find(id);
+            if (itemVenda == null)
             {
                 return HttpNotFound();
             }
-            return View(produto);
+            return View(itemVenda);
         }
 
-        // GET: Produtos/Create
+        // GET: ItemVendas/Create
         public ActionResult Create()
         {
             ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria");
@@ -45,82 +45,82 @@ namespace PAP.Controllers
             return View();
         }
 
-        // POST: Produtos/Create
+        // POST: ItemVendas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProdutoID,CodigoBarras,DescricaoProduto,PrecoProduto,PrecoCusto,PesoBruto,PesoLiquido,EmbalagemID,CategoriaID")] Produto produto)
+        public ActionResult Create([Bind(Include = "ItemVendaID,QuantidadeItemVenda,QuantidadeEstoqueAtual,PrecoUnitario,VendaAtualID,ProdutoID,EmbalagemID,CategoriaID")] ItemVenda itemVenda)
         {
             if (ModelState.IsValid)
             {
-                db.Produtoes.Add(produto);
+                db.ItemVendas.Add(itemVenda);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
-            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
-            return View(produto);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", itemVenda.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", itemVenda.EmbalagemID);
+            return View(itemVenda);
         }
 
-        // GET: Produtos/Edit/5
+        // GET: ItemVendas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
-            if (produto == null)
+            ItemVenda itemVenda = db.ItemVendas.Find(id);
+            if (itemVenda == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
-            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
-            return View(produto);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", itemVenda.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", itemVenda.EmbalagemID);
+            return View(itemVenda);
         }
 
-        // POST: Produtos/Edit/5
+        // POST: ItemVendas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProdutoID,CodigoBarras,DescricaoProduto,PrecoProduto,PrecoCusto,PesoBruto,PesoLiquido,EmbalagemID,CategoriaID")] Produto produto)
+        public ActionResult Edit([Bind(Include = "ItemVendaID,QuantidadeItemVenda,QuantidadeEstoqueAtual,PrecoUnitario,VendaAtualID,ProdutoID,EmbalagemID,CategoriaID")] ItemVenda itemVenda)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(produto).State = EntityState.Modified;
+                db.Entry(itemVenda).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", produto.CategoriaID);
-            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", produto.EmbalagemID);
-            return View(produto);
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "DescricaoCategoria", itemVenda.CategoriaID);
+            ViewBag.EmbalagemID = new SelectList(db.Embalagems, "EmbalagemID", "DescricaoEmbalagem", itemVenda.EmbalagemID);
+            return View(itemVenda);
         }
 
-        // GET: Produtos/Delete/5
+        // GET: ItemVendas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtoes.Find(id);
-            if (produto == null)
+            ItemVenda itemVenda = db.ItemVendas.Find(id);
+            if (itemVenda == null)
             {
                 return HttpNotFound();
             }
-            return View(produto);
+            return View(itemVenda);
         }
 
-        // POST: Produtos/Delete/5
+        // POST: ItemVendas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Produto produto = db.Produtoes.Find(id);
-            db.Produtoes.Remove(produto);
+            ItemVenda itemVenda = db.ItemVendas.Find(id);
+            db.ItemVendas.Remove(itemVenda);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

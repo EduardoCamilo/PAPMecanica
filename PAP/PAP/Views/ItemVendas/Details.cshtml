@@ -1,0 +1,74 @@
+﻿@model BaseModels.ItemVenda
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemVenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._Categoria.DescricaoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Categoria.DescricaoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Embalagem.DescricaoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Embalagem.DescricaoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeItemVenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeItemVenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoqueAtual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoqueAtual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoUnitario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecoUnitario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendaAtualID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendaAtualID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutoID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemVendaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

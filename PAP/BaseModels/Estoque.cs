@@ -12,7 +12,9 @@ namespace BaseModels
         public int EstoqueID { get; set; }
         public int QuantidadeEstoque { get; set; }
         public double MargemSeguranca { get; set; }
-        public int MyProperty { get; set; }
+        public string EnderecoRua { get; set; }
+        public string EnderecoBloco { get; set; }
+        public string EnderecoPratileira { get; set; }
 
         //Relacionamente Estoque --> Produto 
         [ForeignKey("_Produto")]

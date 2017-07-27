@@ -1,4 +1,4 @@
-﻿@model BaseModels.Produto
+﻿@model BaseModels.ItemVenda
 
 @{
     ViewBag.Title = "Delete";
@@ -8,7 +8,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Produto</h4>
+    <h4>ItemVenda</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -28,51 +28,43 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CodigoBarras)
+            @Html.DisplayNameFor(model => model.QuantidadeItemVenda)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CodigoBarras)
+            @Html.DisplayFor(model => model.QuantidadeItemVenda)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DescricaoProduto)
+            @Html.DisplayNameFor(model => model.QuantidadeEstoqueAtual)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DescricaoProduto)
+            @Html.DisplayFor(model => model.QuantidadeEstoqueAtual)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PrecoProduto)
+            @Html.DisplayNameFor(model => model.PrecoUnitario)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PrecoProduto)
+            @Html.DisplayFor(model => model.PrecoUnitario)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PrecoCusto)
+            @Html.DisplayNameFor(model => model.VendaAtualID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PrecoCusto)
+            @Html.DisplayFor(model => model.VendaAtualID)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PesoBruto)
+            @Html.DisplayNameFor(model => model.ProdutoID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PesoBruto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PesoLiquido)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PesoLiquido)
+            @Html.DisplayFor(model => model.ProdutoID)
         </dd>
 
     </dl>

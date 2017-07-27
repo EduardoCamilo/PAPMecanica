@@ -18,7 +18,7 @@ namespace PAP.Controllers
         // GET: Vendas
         public ActionResult Index()
         {
-            var vendas = db.Vendas.Include(v => v._Cliente).Include(v => v._CondicaoPagamento).Include(v => v._Funcionario).Include(v => v._ItemVenda);
+            var vendas = db.Vendas.Include(v => v._Cliente).Include(v => v._CondicaoPagamento).Include(v => v._Funcionario);
             return View(vendas.ToList());
         }
 
@@ -64,7 +64,7 @@ namespace PAP.Controllers
             ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", venda.ClienteID);
             ViewBag.CondicaoPagamentoID = new SelectList(db.CondicaoPagamentoes, "CondicaoPagamentoID", "NomeCondicaoPagamento", venda.CondicaoPagamentoID);
             ViewBag.VendedorID = new SelectList(db.Funcionarios, "FuncionarioID", "NomeFuncionario", venda.VendedorID);
-            ViewBag.ItemVendaID = new SelectList(db.ItemVendas, "ItemVendaID", "ItemVendaID", venda.ItemVendaID);
+            
             return View(venda);
         }
 
@@ -83,7 +83,7 @@ namespace PAP.Controllers
             ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", venda.ClienteID);
             ViewBag.CondicaoPagamentoID = new SelectList(db.CondicaoPagamentoes, "CondicaoPagamentoID", "NomeCondicaoPagamento", venda.CondicaoPagamentoID);
             ViewBag.VendedorID = new SelectList(db.Funcionarios, "FuncionarioID", "NomeFuncionario", venda.VendedorID);
-            ViewBag.ItemVendaID = new SelectList(db.ItemVendas, "ItemVendaID", "ItemVendaID", venda.ItemVendaID);
+            
             return View(venda);
         }
 
@@ -103,7 +103,7 @@ namespace PAP.Controllers
             ViewBag.ClienteID = new SelectList(db.Clientes, "ClienteID", "Nome", venda.ClienteID);
             ViewBag.CondicaoPagamentoID = new SelectList(db.CondicaoPagamentoes, "CondicaoPagamentoID", "NomeCondicaoPagamento", venda.CondicaoPagamentoID);
             ViewBag.VendedorID = new SelectList(db.Funcionarios, "FuncionarioID", "NomeFuncionario", venda.VendedorID);
-            ViewBag.ItemVendaID = new SelectList(db.ItemVendas, "ItemVendaID", "ItemVendaID", venda.ItemVendaID);
+           
             return View(venda);
         }
 

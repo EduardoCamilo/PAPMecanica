@@ -28,10 +28,5 @@ namespace BaseModels
         public int CondicaoPagamentoID { get; set; }
         public virtual CondicaoPagamento _CondicaoPagamento { get; set; }
 
-        //Relacionamente Venda --> ItemVenda
-        [ForeignKey("_ItemVenda")]
-        public int ItemVendaID { get; set; }
-        public virtual ItemVenda _ItemVenda { get; set; }
-
     }
 }

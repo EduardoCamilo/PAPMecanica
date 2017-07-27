@@ -27,22 +27,13 @@
             @Html.DisplayNameFor(model => model.PrecoProduto)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.PrecoCusto)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PesoBruto)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PesoLiquido)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EnderecoRua)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EnderecoBloco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EnderecoPratileira)
         </th>
         <th></th>
     </tr>
@@ -65,22 +56,13 @@
             @Html.DisplayFor(modelItem => item.PrecoProduto)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.PrecoCusto)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.PesoBruto)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PesoLiquido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QuantidadeEstoque)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnderecoRua)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnderecoBloco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnderecoPratileira)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProdutoID }) |

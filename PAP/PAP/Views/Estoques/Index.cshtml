@@ -21,7 +21,13 @@
             @Html.DisplayNameFor(model => model.MargemSeguranca)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MyProperty)
+            @Html.DisplayNameFor(model => model.EnderecoRua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoBloco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoPratileira)
         </th>
         <th></th>
     </tr>
@@ -38,7 +44,13 @@
             @Html.DisplayFor(modelItem => item.MargemSeguranca)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MyProperty)
+            @Html.DisplayFor(modelItem => item.EnderecoRua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoBloco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoPratileira)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EstoqueID }) |
